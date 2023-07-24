@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	const data =[
+		{id : "aaa", name:"홍길동", age:20},
+		{id : "bbb", name:"김개똥", age:30},
+		{id : "ccc", name:"고길동", age:40}
+		];
+	
+	
+	
+	const allMemberView = () => {
+		let msg = `<table border="1">`;
+		msg += "<tr><th>아이디</th><th>이름</th><th>나이</th><tr>";
+		
+		data.forEach( (d) => {
+			msg += "<tr>";
+			msg += `<td>${d.id}</td><td>${d.name}</td><td>${d.age}</td>`;
+			msg += "</tr>";
+		});
+		
+		msg += "</table>";
+		document.querySelector("#view").innerHTML = msg;	
+	}
+	
+	function searchMemberView(){
+		const id = document.getElementById("inputId").value;
+		
+		const result = data.filter( (value, index) => (id == value.id)?value:"")[0];
+		console.log(result);
+		let msg = `<table border="1">`;
+		msg += "<tr><th>아이디</th><th>이름</th><th>나이</th><tr>";
+		msg += "<tr>";
+		msg += `<td>${result.id}</td><td>${result.name}</td><td>${result.age}</td>`;
+		msg += "</tr>";
+		msg += "</table>";
+		document.querySelector("#view").innerHTML = msg;
+			
+		/*data.filter(  (value, index) =>{
+				if(id.value == value.id){
+				let msg = `<table border="1">`;
+				msg += "<tr><th>아이디</th><th>이름</th><th>나이</th><tr>";
+				
+				msg += "<tr>";
+				msg += `<td>${id.id}</td><td>${id.name}</td><td>${id.age}</td>`;
+				msg += "</tr>";
+				msg += "</table>";
+				document.querySelector("#view").innerHTML = msg;
+				
+			}
+		});*/
+		
+		}
+		// id.value -> 검색  
+		// value.id -> DB정보
+
+	</script>
+
+	<div id="view">목록을 보여 줍니다.</div>
+	<hr>
+	
+	<button type="button" onclick="allMemberView()" id="allview">모든 회원 보기</button>
+	<hr>
+	
+	<input type="text" id="inputId" placeholder="input id"><br>
+	<button type="button" onclick="searchMemberView()">특정 회원 조회</button>
+	<hr>
+	
+	<input type="text" id="removeId" placeholder="input id(remove)"><br>
+	<button type="button" onclick="removeMember()">특정 회원 삭제</button>
+	
+</body>
+</html>

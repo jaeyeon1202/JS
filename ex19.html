@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img {width: 300px; height: 300px;}
+</style>
+<script type="text/javascript">
+	var flag =true;
+	const chimg01 = () => {
+		let img = document.getElementById("img01");
+		let msg="";
+		if(flag){
+			msg="다운로드.jpeg";
+		}else{
+			msg="w.jpg";
+		}
+		flag = !flag;
+		img.src = msg;
+	}
+	const chimg02 = () => {
+		const h = document.getElementById("h");
+		h.style.color="green";
+		h.style.textAlign="center";
+		
+	}
+</script>
+</head>
+<body>
+	<img src="w.jpg" id="img01" onclick="chimg01()"><br>
+	
+	<img src="w.jpg" id="img02" onclick="chimg02()"><br>
+	<h3 id="h">test</h3>
+</body>
+</html>

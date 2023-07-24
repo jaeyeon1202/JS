@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let name = '홍길동';
+		let age = prompt("나이 입력");
+		document.write("학생이름: "+name+"<br>"); /*현재 페이지에 저 내용을 쓰겠다*/
+		document.write("학생나이: "+ age+"<br>"); 
+		
+		document.write(`학생이름: ${name}입니다<hr>`); /*``: 백틱을 쓰면 변수을 한줄에 표햔 가능*/
+		document.write(`학생나이: ${age}입니다<hr>`);	/*스프링이나 jsp에서는 겹쳐서 못씀.*/
+		
+		/*입력받는 모든 형식은 문자형식*/
+		console.log(`type age:${typeof age}`);
+		let num = Number(age); //형변환
+		
+		console.log("type num: "+typeof num);
+		console.log(`type num: ${typeof num.toString()}`);
+		console.log(`type num : ${typeof (num+"")}`);
+	</script>
+</body>
+</html>

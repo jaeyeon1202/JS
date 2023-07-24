@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   .img{ width: 100px; height: 100px;}
+</style>
+	<script type="text/javascript">
+		let msg = "안녕하세요";
+		function aaa(){
+			const test = document.getElementById("test");
+			console.log(test);
+			test.innerHTML = msg;
+		}
+		
+		const images = ["최근상품01.jpg", "최근상품05.jpg"];
+		//wnidow.onload //window붙여도 되고 생략도 가능
+		onload = () => {
+			const div = document.getElementById("test");
+			let m = "";
+			for(var i=0; i<images.length; i++){
+				m += `<img src="${images[i]}" id="${i}" class="img">`;
+			}
+			div.innerHTML = m;
+		}
+		
+	</script>
+</head>
+<!-- onload="aaa()" 모든 코드가 다 읽힌 다음에 이 함수를 호출해주세요. 초기화할때 사용 
+	body에 넣어서 사용 -->
+<!-- <body onload="aaa()"> -->
+<body>
+	<div id="test">ㅋㅋㅋㅋㅋ</div>
+	
+</body>
+</html>

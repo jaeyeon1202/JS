@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">
+	$( () => {
+		$("button.move").click( () => {
+			$("img").animate({
+			// $("img").css({
+				left : "300px", height: "300px", width: "350px"
+			});
+		});
+		$("button.init").click( () => {
+			$("img").animate({
+				left : "0px", height: "100px", width: "130px"
+			});
+		});
+	} );
+</script>
+
+</head>
+<body>
+	<button class="move">확대</button>
+	<button class="init">축소</button>
+	<hr>
+	<img src="w.jpg" width="130" height="100" style="position: relative">
+</body>
+</html>

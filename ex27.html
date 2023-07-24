@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const test = () => {
+			alert("test 호출");
+			//document.write("test 실행 됩니다.<br>");
+		}
+		window.onload = () => {
+			document.write("처음 실행 됩니다.<br>");
+			setTimeout(test,2000); 
+			//setTimeout: 2초 기다렸다가 함수를 호출해주세요 / 해당하는 시간동안 기다린 후 특정 함수를 한번 호출
+			//밑에줄 먼저 실행하다가 해당하는 시간이 되면 동작함 -> 콜백함수
+			// 만약 DB에사 데이터 요청후 결과값을 화면에 보여주겠다 
+			// -> 근데 만약 디비 연산 과정이 오래 걸린다면?
+			// -> 디비에서 연산하는 동안 밑에 줄을 먼저 실행하고 디비 ㅅ연산이 끝나면 화면에 출력
+			// 흐름을 방해하지않고 나중에 실행
+			//test();
+			document.write("2초 대기중...");
+		}
+	</script>
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

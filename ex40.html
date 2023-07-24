@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="code.jquery.com_jquery-3.7.0.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<script type="text/javascript" src="test.js"></script>
+
+<script type="text/javascript" >
+	print1();
+	$(document).ready(function(){
+		console.log("jquery 실행");
+		$(".hide").click(function(){//클래스
+			$("p").hide();
+		}); 
+		$("#show").click( () => {//id
+			$("p").show();
+		} ); 
+		})
+	//window.onload = () => {console.log("aaaaa");}
+</script>
+
+</head>
+<body>
+	
+	<p>이벤트처리</p>
+	<button class="hide">메세지삭제</button>
+	<button id="show">메세지 보기</button>
+	
+</body>
+</html>

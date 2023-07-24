@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function test(){
+			console.log("일반함수");
+		}// 비교를 위한 일반함수
+		
+		//화살표함수(위의 일반함수를 화살표함수로 만들기)
+		const test2 = () =>console.log("화살표함수");
+		//const, let 뭐든 상관업성
+		test();
+		test2();
+		
+		//일반함수
+		function test33(){
+			console.log("여러개");
+			return 1000;
+		}
+		let num1 = test33();
+		console.log(num1);
+		
+		//여러문장은 중괄호로 묶는다.
+		let test3 = () => {
+			console.log("여러개");
+			return 1000;
+		}
+		let num = test3();
+		console.log(num);
+		
+	</script>
+</body>
+</html>

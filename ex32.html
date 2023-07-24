@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var cnt = 0;
+		const add = () => {
+			let txt =document.getElementById("txt");
+			let msg ="";
+			msg += `<img src="w.jpg" width="100px" height="100px" 
+					onclick="remove(this)" id="${cnt}">`;
+			cnt++;
+			txt.insertAdjacentHTML("beforeend", msg);
+		}
+		
+		const remove = (idx) => {
+			idx.remove();
+			//alert(idx);
+			//document.getElementById(idx).remove();
+		}
+		
+		
+		const add2 = (t) => {
+			console.log(t);
+			console.log(document.getElementById("a"));
+			t.remove();
+		}//this는 자기 자신
+		
+	</script>
+	<div id="txt2"></div>
+	<button onclick="add2(this)" id="a">add2()</button>
+	
+<hr>
+	<div id="txt"></div>
+	<button onclick="add()">add()</button>
+	
+</body>
+</html>

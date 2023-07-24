@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#h3 {color: pink;}
+</style>
+<script type="text/javascript">
+	const innerTest= () => {
+		const txt = document.getElementById("text");
+		let msg = "<h3 id='h3'>내용 바꾸기</h3>";
+		//txt.innerHTML = msg;
+		txt.innerText = msg;
+	}
+</script>
+</head>
+<body>
+	<label id="text">텍스트 값</label>
+	<button type="button" onclick="innerTest()">클릭</button>
+</body>
+</html>

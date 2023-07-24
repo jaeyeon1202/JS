@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body></body>
+	<script type="text/javascript">
+		let name=prompt("이름입력");
+		let age = prompt(name+ "님의 나이입력");
+		let addr = prompt(name+ "님의 주소입력");
+		
+		document.weite(`이름을 입력하세요: ${name}`);
+		document.write(`${name}님의 나이를 입력하세요: ${age}`);
+		document.write(`${name}님의 주소를 입력하세요: ${addr}`);
+	</script>
+	<table border="1">
+		<tr>
+			<th>이름</th><th>나이</th><th>주소</th>
+		</tr>
+		<tr>
+			<td> <script type="text/javascript">document.write(name);</script> </td>
+			<td> <script type="text/javascript"> document.write(age);</script> </td>
+			<td> <script type="text/javascript"> document.write(addr);</script> </td>
+			
+		</tr>
+		<tr>
+			<td> <script type="text/javascript">document.write(name);</script> </td>
+			<td> <script type="text/javascript"> document.write(age);</script> </td>
+			<td> <script type="text/javascript"> document.write(addr);</script> </td>
+			
+		</tr>
+	</table>
+
+</html>

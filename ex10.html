@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		const n1 = prompt("수 입력"); //const: 상수화(=final)
+		const n2 = prompt("수 입력");
+	
+		const sum = sumFunc(n1, n2);
+		
+		document.write(`${n1}+${n2}=${sum}`);
+		
+		function sumFunc(n11, n22){
+			const sum= Number(n11)+Number(n22);
+			return sum;
+		}
+	</script>
+</body>
+</html>

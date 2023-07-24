@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var myVar;
+		const start = () => {
+			myVar = setInterval(myTimer, 1000);
+			//해당하는 함수를 한번만 호출
+			//한번 실행놓으면 해당하는 시간마다 계속 호출 -> 1초에 한번씩 계속 호출
+		}
+		
+		const myTimer = () => {
+			var d = new Date();
+			document.getElementById("time").innerHTML 
+											//d.toLocaleTimeString(); //오전몇시
+											=d.toLocaleString(); //년월분시초
+		}
+		
+		const stop = () => {clearInterval(myVar);}
+	
+	</script>
+	<div id="time"></div>
+	<button onclick="start()">start</button>
+	<button onclick="stop()">stop</button>
+	
+</body>
+</html>

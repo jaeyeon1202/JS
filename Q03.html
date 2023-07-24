@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let count = prompt("커피개수");
+		let total;
+		if(count>10){
+			total = 20000 + (count-10)*1500;
+		}else
+			total=2000*count;
+		
+		document.write("가격: "+total);
+		document.write("<hr");
+		///
+		count=prompt("usb개수 입력");
+		if(count>100){
+			total=(5000*count)*0.88;
+		}else if(count>10){
+			total=(5000*count)*0.9;
+		}
+		document.write("가격: "+total);
+	</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	const myMousedown = () => {
+		document.getElementById("span").innerHTML = "마우스 다운";
+	}
+	const myMouseup = () => {
+		document.getElementById("span").innerHTML = "마우스 up";
+	}
+	let cnt=0;
+	const myMousemove = () => {
+		//해당하는 내용안에서 움짓이면 cnt계속 올라감 -> 계속 호출됨
+		//해당하는 내용: span id="count1"
+		cnt++;
+		let count1 =document.getElementById("count1");
+		count1.innerHTML = cnt;
+	}
+	const myMouseover = () => {
+		cnt++;
+		let count2 =document.getElementById("count2");
+		count2.innerHTML = cnt;
+	}
+	const myOut = () =>{
+		let count2 =document.getElementById("count2");
+		count2.innerHTML = "마우스 나감";
+	}
+</script>
+</head>
+<body>
+	<!--마우스가 눌렸을때와 올라갔을때  -->
+	<div onmousedown="myMousedown()" onmouseup="myMouseup()">
+		<span id="span">이벤트 알아보기</span>
+	</div>
+	<hr>
+	<!-- 움직이는 동안 계속 실행 -->
+	<div onmousemove="myMousemove()"
+		style="background: gray; width: 100px; height: 100px;">
+		<span id="count1">0</span>
+	</div>
+	<hr>
+	<!-- mouseover: 들어올때 1번 실행
+		mouserout: 해당위치에서 마우스포인터가 나갔을때 -->
+	<div onmouseover="myMouseover()" onmouseout="myOut()"
+		style="background: pink; width: 100px; height: 100px;">
+		<span id="count2">0</span>
+	</div>
+</body>
+</html>

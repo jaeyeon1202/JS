@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>태그를 직접 만드는 함수</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var imgl
+		function add(){
+			img = document.createElement("img"); //img태그를 만들겠다
+			//img.src = "w.jpg"; // img태그에 src추가
+			//img.style.height = "100px"; //img태그에 styled의 height 추가
+			//img.width=100;
+			
+			img.setAttribute("src","w.jpg");
+			img.setAttribute("width","100");
+			img.setAttribute("style","height:100px; border:1px soild;");
+			//setAttribute 함수를 통해서도 추가 가능
+			
+			console.log(img);
+			document.getElementById("test").appendChild(img);
+			//appendChild => insertAdjacentHTML과 비슷
+		}
+		
+		//innerHTML을 소화하지 못하는 웹 브라우저가 있을 수 있다.
+		function addTB(){
+			let table = document.createElement("table");
+			table.border="1";
+			
+			let tr = document.createElement("tr");
+			
+			let td1 = document.createElement("td");
+			td1.innerHTML="내용11";
+			tr.appendChild(td1);
+			
+			let td2 = document.createElement("td");
+			td2.innerHTML="내용22";
+			tr.appendChild(td2);
+			
+			table.appendChild(tr);
+			
+			document.getElementById("test").appendChild(table);
+		}
+		
+		function remove(){
+			let items = document.getElementById("test"); //테스트를 가져와라
+			//document.getElementById("test").remove(); //테스트를 지워라(태그 자체 삭제)
+			//remove는 자기 자신을 징운다
+			// 자식만도 삭제 가능
+			items.removeChild(items.childNodes[items.childNodes.length - 1]);
+		}
+	</script>
+	
+	<p id="test"></p>
+	<a href="#" onclick="addTB()">테이블추가</a>
+	<a href="#" onclick="add()">이미지추가</a>
+	<b onclick="remove()" style="cursor: pointer;">이미지삭제</b>
+<!-- onclick 꼭 버튼에만 쓰는건 아님 -->
+	
+</body>
+</html>

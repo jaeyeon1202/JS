@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	function test(){
+		//alert("test");
+		let id = document.getElementById("txt");
+		if(id.value != ""){
+			fo.submit();
+		}else{
+			alert("값을 입력하세")
+		}
+	}
+
+
+</script>
+
+	<form action="ex36.html">
+		<input type="text" id="txt"><br>	
+		<input type="button" onclick="test()" value="전송">
+	</form>
+	
+	<input type="button" value="클릭"
+			 onclick="location.hrdf='ex35.html'"><br>
+	<input type="button" value="클릭" onclick="test2()"><br>
+	<a href="">이동</a>	
+	
+<script type="text/javascript">
+	function test2(){
+		location.href="ex35.html";
+	}
+</script>
+</body>
+</html>

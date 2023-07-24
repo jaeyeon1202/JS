@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("#1<br> 입력한 데이터가 3의 배수인 경우 출력하시오<br>");
+		let num = prompt("1수 입력");
+		if(num%3==0){
+			document.write(num+"은 3의 배수입니다.");
+		}
+		else
+			document.write("3의 배수가 아님.");
+		document.write("<hr>");
+		
+		document.write("#2<br> 입력한 수의 절대값을 구하는 프로그램을 작성하시오.<br>");
+		num = prompt("2수 입력");
+		if(num<0){
+			document.write("절대값: "+ -num);
+		}
+		else
+			document.write("양수입니다.");
+		document.write("<hr>");
+		//
+		document.write("#3<br> 두수를 입력 받아 큰 수를 출력하시오.<br>");
+		num = prompt("3수 입력");
+		let num2 = prompt("3수 입력");
+		if(num>num2){
+			document.write("큰수: "+num);
+		}
+		else 
+			document.write("큰수: "+num2);
+		document.write("<hr>");
+		///
+		document.write("#4<br> 세수를 입력 받아 큰 수를 출력하시오.<br>");
+		num = prompt("4수 입력");
+		num2 = prompt("4수 입력");
+		let num3 = prompt("4수 입력");
+		
+		if(num>num2 && num>num3){
+				document.write("큰수: "+num);
+		}else if(num2>num3 && num2>num){
+			document.write("큰수: "+num2);
+		}else{
+			document.write("큰수: "+num3);
+		}
+		document.write("<hr>");
+		/////
+		document.write("#5<br> 두 수를 입력 받아 큰 수가 짝수이면 출력하시오.<br>");
+		num = prompt("5수 입력");
+		num2 = prompt("5수 입력");
+		
+		if(num>num2 && num%2==0){
+				document.write("큰수: "+num);
+		}else if(num2>num && num2%2==0){
+			document.write("큰수: "+num2);
+		}else
+			document.write("야야집에가");
+		document.write("<hr>");
+		///
+		
+		document.write("#6<br> 두 수를 입력 받아 합이 짝수이고 3의 배수인 수를 출력하시오.<br>");
+		num = prompt("6수 입력");
+		num2 = prompt("6수 입력");
+		
+		if((num+num2)%2==0 && (num+num2)%3==0){
+			document.write("성공")
+		}else
+			document.write("실패")
+		
+		
+		document.write("<hr>");
+		////
+		
+		document.write("#7<br> 수를 입력 받아 5의 배수인지 아닌지 구분.<br>");
+		num = prompt("7수 입력");
+		
+		if(num%5==0){
+			document.write("5의배수")
+		}else
+			document.write("아님")
+		document.write("<hr>");
+		///
+		document.write("#8<br> 수를 입력 받아 0보다 크고 100보다 작으면 정상, 아니면 비정상.<br>");
+		num = prompt("8수 입력");
+		
+		if(num>0 && num<100){
+			document.write("정상")
+		}else
+			document.write("비정상")
+		document.write("<hr>");
+		///
+		document.write("#9<br> 두 수를 입력 받아 짝수이면서 3의 배수인 수를 출력하시오.<br>");
+		num = prompt("9수 입력");
+		
+		if(num%2==0 && num%3==0){
+			document.write("성공")
+		}else
+			document.write("실패")
+		document.write("<hr>");
+		//
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</body>
+</html>

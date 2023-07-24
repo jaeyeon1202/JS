@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//map
+		var dic ={f0: 100, "f1":200, name:"홍길동"};
+		document.write(dic);
+		console.log(dic);
+		document.write(`=> type: ${typeof dic}<br>`);
+		
+		console.log(dic.f0);
+		console.log(dic["name"]);
+		
+		document.write("<hr>");
+		
+		const data=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+		let resultMap=data.map( (value)=> value <=5 ); //true/false
+		document.write(resultMap + "<hr>");
+		
+		let resultFilter = data.filter( (value) => value <=5);
+		document.write(resultFilter+"<br>");
+	</script>
+</body>
+</html>

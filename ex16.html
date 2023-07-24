@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	const clickEvent = () => {
+		//alert("실행");
+		const n = document.getElementById("name");
+		const n2= document.getElementById("name2"); //document:현재페이지
+		//getElementById 얻어오겠다 요소를 (name)이라는 곳에서
+		// 그거를 n에 저장한다 -> 태그 자체를 가지고 오는것
+		// => input태그 자체가 n이 됨.
+		console.log(n);
+		//n.value ="안녕하세요"; 
+		//n자체가 input태그가 된거기 때문에 .속성으로 값을 사용해서 값을 줄수있음
+		n2.value=n.value;
+		n.value="";
+		//n값을 n2에 넣어서 넣고 클릭을 누르면 n은 값이 없어지고 n의 값이 n2에 들어감
+	}
+</script>
+<style type="text/css">
+	#name{width: 30px;}
+</style>
+</head>
+<body>
+	<input type="text" id="name" placeholder="input name"><br> 
+	<!-- id, class는 html, css, 자바스크립트 동일하게 사용 -->
+	<input type="text" id="name2" placeholder="input name2"><br>
+	
+	<input type="button" onclick="clickEvent()" value="클릭">
+	<!-- 클릭 버튼이 되면 해당 함수(clickEvent())를 실행해라 -->
+<hr>
+	event <br>
+	- 사용자가 동작하는 모든 행위<br>
+	- 키보드를 누를 경우, 놨을 경우, 마우스를 움직이는 경우 등..<br>
+	<hr>
+	아무스 이벤트<br>
+	- click : 마우스 클릭이 발생하는 경우<br>
+	- dblclick : 더블클릭<br>
+	- mousedown : 눌렀을 경우<br>
+	- mousemove : 포인터가 움직이는 경우<br>
+	- mouseover : 포인터가 특정 태그에 들어갔을 경우<br>
+	...등<br>
+	<hr>
+	키보드 이벤트<br>
+	- kwypress : 키보드가 눌렸을 경우<br>
+	- keydown : 누르는 동안<br>
+	- keyup : 키가 올라왔을 경우<br>
+	...등<br>
+	<hr>
+</body>
+</html>
